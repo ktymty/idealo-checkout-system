@@ -1,0 +1,10 @@
+/Users/kirty/dev/checkout-system/src/main/java/promotions/PromotionStrategy.java
+/Users/kirty/dev/checkout-system/src/main/java/promotions/BuyNItemsWithDiscount.java
+/Users/kirty/dev/checkout-system/src/main/java/repository/SkuRepository.java
+/Users/kirty/dev/checkout-system/src/main/java/model/Sku.java
+/Users/kirty/dev/checkout-system/src/main/java/model/ShoppingCart.java
+/Users/kirty/dev/checkout-system/src/main/java/model/PricingRules.java
+/Users/kirty/dev/checkout-system/src/main/java/promotions/LineItemPromotion.java
+/Users/kirty/dev/checkout-system/src/main/java/Checkout.java
+/Users/kirty/dev/checkout-system/src/main/java/promotions/BuyItemWithFixedDiscount.java
+/Users/kirty/dev/checkout-system/src/main/java/model/LineItem.java
