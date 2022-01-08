@@ -3,21 +3,20 @@ package promotions;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Value;
 import model.LineItem;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
 
-@Value
+
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class BuyNItemsWithDiscount implements LineItemPromotion {
 
-    HashSet<String> setOfPromoSkuId;
-    int minCountOfSkuToGetDiscount;
-    int minCountOfSkuWithDiscount;
-    double discountValue;
+    private HashSet<String> setOfPromoSkuId;
+    private int minCountOfSkuToGetDiscount;
+    private int minCountOfSkuWithDiscount;
+    private double discountValue;
 
     @Override
     public void applyDiscount(LineItem lineItem) {

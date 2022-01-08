@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Value;
 import repository.SkuRepository;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -28,7 +29,8 @@ public class ShoppingCart {
         if (lineItem.isPresent()) {
             lineItem.get().setCount(lineItem.get().getCount() + 1);
         } else {
-            lineItems.add(new LineItem(sku, 1));
+            int count = 1;
+            lineItems.add(LineItem.builder().sku(sku).count(count).totalPrice(sku.getMarkedPrice().multiply(BigDecimal.valueOf(count))).build());
         }
     }
 }
