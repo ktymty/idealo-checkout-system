@@ -8,6 +8,7 @@ model/PricingRules.class
 repository/SkuRepository.class
 model/Sku$SkuBuilder.class
 promotions/BuyNItemsWithDiscount$BuyNItemsWithDiscountBuilder.class
+model/LineItem$LineItemBuilder.class
 model/ShoppingCart$ShoppingCartBuilder.class
 promotions/BuyNItemsWithDiscount.class
 promotions/BuyItemWithFixedDiscount.class

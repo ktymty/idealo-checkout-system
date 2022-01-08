@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import promotions.BuyItemWithFixedDiscount;
 import promotions.BuyNItemsWithDiscount;
-import promotions.PromotionStrategy;
+import promotions.LineItemPromotionStrategy;
 import repository.SkuRepository;
 
 import java.math.BigDecimal;
@@ -33,7 +33,7 @@ class CheckoutTest {
         skuRepository.add(Sku.builder().id("E").markedPrice(BigDecimal.valueOf(100)).build());
 
         // Setup promotions for SKU's
-        List<PromotionStrategy> promotionStrategies = new ArrayList<>();
+        List<LineItemPromotionStrategy> promotionStrategies = new ArrayList<>();
         // new promotions can be added for SKU's with "Buy N items for X Price"
         promotionStrategies.add(BuyNItemsWithDiscount.builder().setOfPromoSkuId(new HashSet<>(List.of("A"))).minCountOfSkuToGetDiscount(3).minCountOfSkuWithDiscount(1).discountValue(0.5).build());
         promotionStrategies.add(BuyNItemsWithDiscount.builder().setOfPromoSkuId(new HashSet<>(List.of("B"))).minCountOfSkuToGetDiscount(2).minCountOfSkuWithDiscount(1).discountValue(0.4).build());

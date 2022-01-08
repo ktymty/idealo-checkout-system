@@ -8,9 +8,12 @@ import model.LineItem;
 import java.math.BigDecimal;
 import java.util.HashSet;
 
+/**
+ * Buy an Item with Fixed Discount implements `LineItemPromotionStrategy` interface. it implements its algorithm in `applyDiscount` method.
+ */
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class BuyItemWithFixedDiscount implements LineItemPromotion {
+public class BuyItemWithFixedDiscount implements LineItemPromotionStrategy {
 
     private static final double MAX_DISCOUNT = 100;
     private static final double MIN_DISCOUNT = 0;

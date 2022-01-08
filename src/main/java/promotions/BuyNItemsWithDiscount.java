@@ -8,10 +8,12 @@ import model.LineItem;
 import java.math.BigDecimal;
 import java.util.HashSet;
 
-
+/**
+ * Buy N items for X price implements `LineItemPromotionStrategy` interface. it implements its algorithm in `applyDiscount` method.
+ */
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class BuyNItemsWithDiscount implements LineItemPromotion {
+public class BuyNItemsWithDiscount implements LineItemPromotionStrategy {
 
     private HashSet<String> setOfPromoSkuId;
     private int minCountOfSkuToGetDiscount;

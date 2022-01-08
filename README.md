@@ -28,7 +28,7 @@ Unit tests have been written with good code coverage.
     - **model**: This package represents the data model.
     - **promotions**: This package contains class and interface to apply promotions.
     - **repository**: This package contains class to store SKU's in-memory.
-2. A Strategy Design pattern has been used to select a promotion during runtime.
+2. A Strategy Design pattern has been used to select a promotion during runtime. LineItemPromotionStrategy is the interface which each promotion algorithm must apply. This pattern supports SOLID pattern. The D in SOLID says we must depend on abstractions, not on concretions. Also, the O which says entities should be open for, not extensions. The I, we have one specific interface for the concrete strategy to implement. The S, all the classes implementing the strategy have only one job of applying discounts. The L, all subclasses of the concrete strategies are substitutable for their superclasses. Subclassing could have been an alternative approach, but we will eventually run into a code that is hard to understand and maintain as we will have many related classes with difference being on the algorithms they carry.
 
 ##  Exception
 

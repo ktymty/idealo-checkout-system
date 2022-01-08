@@ -3,7 +3,10 @@ package promotions;
 import model.LineItem;
 import model.ShoppingCart;
 
-public interface LineItemPromotion extends PromotionStrategy {
+/**
+ * Interface all promotion algorithms must implement
+ */
+public interface LineItemPromotionStrategy {
     void applyDiscount(LineItem lineItem);
 
     default boolean filter(LineItem lineItem) {
