@@ -9,11 +9,11 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 
 /**
- * Buy an Item with Fixed Discount implements `LineItemPromotionStrategy` interface. it implements its algorithm in `applyDiscount` method.
+ * Buy an Item with Fixed Discount implements `PromotionStrategy` interface. it implements its algorithm in `applyDiscount` method.
  */
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class BuyItemWithFixedDiscount implements LineItemPromotionStrategy {
+public class BuyItemWithFixedDiscount implements PromotionStrategy {
 
     private static final double MAX_DISCOUNT = 100;
     private static final double MIN_DISCOUNT = 0;

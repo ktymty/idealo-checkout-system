@@ -9,11 +9,11 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 
 /**
- * Buy N items for X price implements `LineItemPromotionStrategy` interface. it implements its algorithm in `applyDiscount` method.
+ * Buy N items for X price implements `PromotionStrategy` interface. it implements its algorithm in `applyDiscount` method.
  */
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class BuyNItemsWithDiscount implements LineItemPromotionStrategy {
+public class BuyNItemsWithDiscount implements PromotionStrategy {
 
     private HashSet<String> setOfPromoSkuId;
     private int minCountOfSkuToGetDiscount;

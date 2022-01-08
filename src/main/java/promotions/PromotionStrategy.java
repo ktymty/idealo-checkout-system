@@ -6,7 +6,7 @@ import model.ShoppingCart;
 /**
  * Interface all promotion algorithms must implement
  */
-public interface LineItemPromotionStrategy {
+public interface PromotionStrategy {
     void applyDiscount(LineItem lineItem);
 
     default boolean filter(LineItem lineItem) {

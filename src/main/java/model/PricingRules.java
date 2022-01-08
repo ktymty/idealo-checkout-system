@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
-import promotions.LineItemPromotionStrategy;
+import promotions.PromotionStrategy;
 import repository.SkuRepository;
 
 import java.util.List;
@@ -14,5 +14,5 @@ import java.util.List;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class PricingRules {
     SkuRepository skuRepository;
-    List<LineItemPromotionStrategy> promotionStrategies;
+    List<PromotionStrategy> promotionStrategies;
 }
