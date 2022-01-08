@@ -8,6 +8,7 @@ import repository.SkuRepository;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,7 @@ public class ShoppingCart {
 
     SkuRepository skuRepository;
     List<LineItem> lineItems = new ArrayList<>();
+    Date date = new Date(); // to check today's date and apply a particular discount for a SKU on a certain date.
 
     public void addSku(String skuId) {
         Sku sku = skuRepository.findById(skuId);
